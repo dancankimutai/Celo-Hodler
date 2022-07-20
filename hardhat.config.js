@@ -1,9 +1,7 @@
-require("@nomiclabs/hardhat-waffle");
-require('dotenv').config({path: '.env'});
+require('@nomiclabs/hardhat-waffle');
+require('dotenv').config();
 
-// This is a sample Hardhat task. To learn how to create your own go to
-// https://hardhat.org/guides/create-task.html
-task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
+task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
 
   for (const account of accounts) {
@@ -11,37 +9,29 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   }
 });
 
-const getEnv = (variable, optional = false) => {
-  if (!process.env[variable]) {
-    if (optional) {
-      console.warn(`[@env]: Environmental variable for ${variable} is not supplied.`)
-    } else {
-      throw new Error(`You must create an environment variable for ${variable}`)
-    }
-  }
-
-  return process.env[variable]?.replace(/\\n/gm, '\n')
+const privateKey = process.env.PRIVATEKEY;
+if (!privateKey) {
+  throw new Error('Please set your privateKey in a .env file');
 }
 
-// Your mnemomic key
- const MNEMONIC = getEnv("MNEMONIC")
-
-// You need to export an object to set up your config
-// Go to https://hardhat.org/config/ to learn more
-
-/**
- * @type import('hardhat/config').HardhatUserConfig
- */
- module.exports = {
-  solidity: "0.8.4",
+module.exports = {
   networks: {
+    hardhat: {
+      chainId: 1337,
+    },
     alfajores: {
       url: "https://alfajores-forno.celo-testnet.org",
-      accounts: {
-        mnemonic: process.env.MNEMONIC,
-        path: "m/44'/60'/0'/0",
-      },
+      accounts: [privateKey],
       chainId: 44787,
+    },
+  },
+  solidity: {
+    version: '0.8.4',
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 1000,
+      },
     },
   },
 };
