@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import './item.css'
-import creator from '../../assets/seller2.png'
-import item from '../../assets/item1.png'
+import creator from '../assets/seller2.png'
+import item from '../assets/item1.png'
 import axios from "axios";
 import {ethers} from "ethers";
 import {useParams} from "react-router";
 import {useContractKit} from "@celo-tools/use-contractkit";
-import {useMarketContract} from "../../hooks/useMarketContract";
+import {useMarketContract} from "./hooks/useMarketContract";
 import {useNavigate} from "react-router-dom";
 
 const Item = () => {

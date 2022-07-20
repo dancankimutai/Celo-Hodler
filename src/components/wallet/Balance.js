@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {formatBigNumber} from "../../utils/helpers";
+import {formatBigNumber} from "./utils/helpers";
 
 const Balance = ({ amount, symbol }) => {
   if (amount) {

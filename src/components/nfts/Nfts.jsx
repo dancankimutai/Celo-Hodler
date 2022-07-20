@@ -4,7 +4,7 @@ import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 import {Link} from 'react-router-dom';
 import {ClipLoader} from "react-spinners";
 import {ethers} from "ethers";
-import {useMarketContract} from "../../hooks/useMarketContract";
+import {useMarketContract} from "./hooks/useMarketContract";
 import {useContractKit} from "@celo-tools/use-contractkit";
 
 const Nfts = ({title, nfts, loading, relist}) => {
