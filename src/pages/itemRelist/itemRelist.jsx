@@ -4,7 +4,7 @@ import axios from "axios";
 import {ethers} from "ethers";
 import {useParams} from "react-router";
 import {useContractKit} from "@celo-tools/use-contractkit";
-import {useMarketContract} from "../../hooks/useMarketContract";
+import {useMarketContract} from "./hooks/useMarketContract";
 import {useNavigate} from "react-router-dom";
 
 const ItemRelist = () => {

@@ -3,7 +3,7 @@ import Logo from "../assets/images/Celo-Hodler-Logo.png"
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import {  Link } from "react-router-dom";
 import {useContractKit} from "@celo-tools/use-contractkit";
-import {truncateAddress} from "../../utils/helpers";
+import {truncateAddress} from "./utils/helpers";
 import "./Navbar.css";
 
 const Menu = () => (

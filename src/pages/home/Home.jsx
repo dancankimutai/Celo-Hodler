@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {Nfts, Header, } from '../../components'
+import {Nfts, } from './components/nfts/Nfts'
 import {useContractKit} from "@celo-tools/use-contractkit";
-import {useMarketContract} from "../../hooks/useMarketContract";
+import {useMarketContract} from "./hooks/useMarketContract";
 import axios from "axios";
 import {ethers} from "ethers";
 
@@ -45,7 +45,7 @@ const Home = () => {
     }
 
   return <div>
-   <Header />
+   
    <Nfts nfts={nfts} title="Hot NFts" loading={loading}  />
   </div>;
 };
