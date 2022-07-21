@@ -1,4 +1,4 @@
-export {default as Navbar} from './navbar/Navbar';
+export {default as Navbar} from '../components/navbar/Navbar';
 
-export {default as Nfts} from './nfts/Nfts';
+export {default as Nfts} from '../components/nfts/Nfts.jsx';
 

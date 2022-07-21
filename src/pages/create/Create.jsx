@@ -1,8 +1,8 @@
 import './create.css'
-import Image from '../assets/Image.png'
+import Image from '../../assets/Image.png'
 import {useEffect, useState} from "react";
 import {create as ipfsHttpClient} from 'ipfs-http-client'
-import {useMarketContract} from "./hooks/useMarketContract";
+import {useMarketContract} from "../../hooks/useMarketContract";
 import {BigNumber, ethers} from "ethers";
 
 import CircleLoader from "react-spinners/ClipLoader";
@@ -10,6 +10,7 @@ import {useContractKit} from "@celo-tools/use-contractkit";
 import { useNavigate } from "react-router-dom";
 
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
+
 const Create = () => {
     const {address, connect, performActions} = useContractKit()
     const navigate = useNavigate();

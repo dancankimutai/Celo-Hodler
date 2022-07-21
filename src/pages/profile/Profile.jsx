@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import './profile.css'
-import profile_banner from '../assets/profile_banner.png'
-import Nfts from './components/nfts/Nfts'
+import profile_banner from '../../assets/profile_banner.png'
+import Nfts from '../../components/nfts/Nfts'
 import {useContractKit} from "@celo-tools/use-contractkit";
-import {useMarketContract} from "./hooks/useMarketContract";
+import {useMarketContract} from "../../hooks/useMarketContract";
 import axios from "axios";
 import {ethers} from "ethers";
 
