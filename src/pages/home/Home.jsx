@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Nfts  from '../../components/nfts/Nfts'
+import {Nfts } from '../../components'
 import {useContractKit} from "@celo-tools/use-contractkit";
 import {useMarketContract} from "../../hooks/useMarketContract";
 import axios from "axios";

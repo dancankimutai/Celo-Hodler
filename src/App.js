@@ -1,5 +1,7 @@
 import React from "react";
 import LandingPage from "./pages/LandingPage";
+import Dashboard from "./pages/Dashboard";
+
 import {Home,Profile,Item, Create} from './pages'
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ItemRelist from "./pages/itemRelist/itemRelist";
@@ -22,6 +24,7 @@ function App() {
       
 
     </Router><div className="App">
+         <Dashboard />
         <LandingPage />
       </div></>
   );
