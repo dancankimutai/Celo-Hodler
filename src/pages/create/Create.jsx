@@ -10,7 +10,6 @@ import {useContractKit} from "@celo-tools/use-contractkit";
 import { useNavigate } from "react-router-dom";
 
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
-
 const Create = () => {
     const {address, connect, performActions} = useContractKit()
     const navigate = useNavigate();
